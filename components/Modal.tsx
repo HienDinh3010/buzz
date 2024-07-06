@@ -32,11 +32,12 @@ const Modal: React.FC<ModalProps> = ({
     }, [disabled, onClose]);
 
     const handleSubmit = useCallback(() => {
+        console.log("submit here");
         if (disabled) {
             return;
         }
 
-        onClose();
+        onSubmit();
     }, [disabled, onSubmit]);
 
     if (!isOpen) {
